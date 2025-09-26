@@ -1,0 +1,27 @@
+{
+  "watch": [
+    "controllers",
+    "routes",
+    "models",
+    "middlewares",
+    "utils",
+    "services",
+    "config",
+    "*.js",
+    "*.ts"
+  ],
+  "ignore": [
+    "node_modules",
+    "dist",
+    "build",
+    ".next",
+    ".nuxt",
+    ".vite",
+    ".svelte-kit",
+    "coverage",
+    "logs",
+    ".git"
+  ],
+  "ext": "js,ts,json",
+  "delay": "200ms"
+}

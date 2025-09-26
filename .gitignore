@@ -1,0 +1,31 @@
+# IDE / Editor
+.vscode/
+.idea/
+
+# Node modules
+node_modules/
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
+
+# Env & secrets
+.env
+.env.*
+!.env.example
+
+# Logs & temp
+logs/
+*.log
+temp/
+
+# Runtime data
+data/
+restore/
+uploads/
+
+# Build / dist
+dist/
+build/
+
+# OS
+.DS_Store

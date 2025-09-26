@@ -1,0 +1,41 @@
+{
+  "name": "bungalow_app-backend",
+  "version": "1.0.0",
+  "description": "The wild oasis project backend nodejs express mongodb mongoose",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start:app": "node --trace-warnings server.js",
+    "start:auth": "node --trace-warnings authServer.js",
+    "start:dev": "nodemon --trace-warnings --watch . --watch src --ignore node_modules --ignore logs --ignore .git --ignore uploads --ignore data --ext js,ts,json,mjs,cjs --delay 200ms --verbose server.js",
+    "startAuth:dev": "nodemon --trace-warnings --watch . --watch src --ignore node_modules --ignore logs --ignore .git --ignore uploads --ignore data --ext js,ts,json,mjs,cjs --delay 200ms --verbose authServer.js"
+  },
+  "author": "Onur Yilmaz",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "body-parser": "^2.2.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "date-fns": "^4.1.0",
+    "date-fns-tz": "^3.2.0",
+    "express": "^5.1.0",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^8.0.1",
+    "helmet": "^8.1.0",
+    "hpp": "^0.2.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.15.1",
+    "mongoose-lean-virtuals": "^2.0.0",
+    "morgan": "^1.10.0",
+    "multer": "^2.0.1",
+    "nanoid": "^5.1.5",
+    "nodemailer": "^7.0.5",
+    "nodemon": "^3.1.10",
+    "qs": "^6.14.0",
+    "sharp": "^0.34.2",
+    "useragent": "^2.3.0",
+    "validator": "^13.15.15",
+    "winston": "^3.17.0"
+  }
+}
