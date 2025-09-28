@@ -179,41 +179,41 @@ Example package.json scripts:
 
 ## 🚀 Production
 
-Run behind a reverse proxy (Caddy/Nginx) with TLS
+- Run behind a reverse proxy (Caddy/Nginx) with TLS
 
-Build/run via Docker:
+- Build/run via Docker:
 
 ```
 docker compose up -d --build
 ```
 
-Healthcheck endpoint: GET /health
+- Healthcheck endpoint: GET /health
 
-Logs to stdout; centralize with your stack
+- Logs to stdout; centralize with your stack
 
 ## 🔒 Security & Hardening
 
-Helmet, CORS with explicit origins, rate limiting, HPP, Mongo sanitization
+- Helmet, CORS with explicit origins, rate limiting, HPP, Mongo sanitization
 
-Strong JWT secrets, short access token TTL, rotate refresh tokens
+- Strong JWT secrets, short access token TTL, rotate refresh tokens
 
-Validate populate paths via whitelist (already supported)
+- Validate populate paths via whitelist (already supported)
 
-Enforce RBAC per route
+- Enforce RBAC per route
 
-Limit upload size, validate MIME, process images via Sharp
+- Limit upload size, validate MIME, process images via Sharp
 
 ## 📐 Conventions
 
-Dates: persist in UTC; convert for display with HOTEL_TIME_ZONE
+- Dates: persist in UTC; convert for display with HOTEL_TIME_ZONE
 
-Status rules (UTC-based):
+- Status rules (UTC-based):
 
-Before/at check-in day ⇒ unconfirmed
+- Before/at check-in day ⇒ unconfirmed
 
-Between check-in (exclusive) and checkout (inclusive) ⇒ checked-in
+- Between check-in (exclusive) and checkout (inclusive) ⇒ checked-in
 
-After checkout ⇒ checked-out (often isPaid=true)
+- After checkout ⇒ checked-out (often isPaid=true)
 
 ## 📜 License
 
