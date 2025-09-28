@@ -594,7 +594,7 @@ class Authcontroller {
       .at(0);
 
     req.body.email = minAutoLoginUser.email;
-    req.body.password = "Test.1234";
+    req.body.password = process.env.SECURE_PASSWORD;
 
     minAutoLoginUser.autoLoginCouter++;
 
