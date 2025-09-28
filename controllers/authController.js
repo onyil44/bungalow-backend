@@ -258,7 +258,6 @@ class Authcontroller {
   });
 
   login = catchAsync(async (req, res, next) => {
-    console.log(req.body);
     const { email, password } = req.body;
 
     if (!email || !password) {
@@ -322,8 +321,6 @@ class Authcontroller {
 
     if (user && !(await user.comparePassword(password, user.password))) {
       user.wrongAttemptNumber++;
-
-      console.log(process.env.WRONG_ATTEMPT_RANGE);
 
       if (user.wrongAttemptNumber >= process.env.WRONG_ATTEMPT_RANGE) {
         user.isActive = false;
@@ -592,6 +589,8 @@ class Authcontroller {
     const minAutoLoginUser = users
       .sort((a, b) => Number(a.autoLoginCouter) - Number(b.autoLoginCouter))
       .at(0);
+
+    console.log(process.env.SECURE_PASSWORD);
 
     req.body.email = minAutoLoginUser.email;
     req.body.password = process.env.SECURE_PASSWORD;
